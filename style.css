@@ -1,0 +1,11 @@
+/* Company Logo */
+#logo {
+    width: 120px;
+    height: 120px;
+    background: url('images/8ab47efbbec4670b8e5221558c3f6463.jpg') no-repeat center center/cover;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}

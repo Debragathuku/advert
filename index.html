@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNest - Your Trusted Partner</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        /* Logo with bouncing animation */
+        #logo {
+            width: 120px;
+            height: 120px;
+            background: url('images/8ab47efbbec4670b8e5221558c3f6463.jpg') no-repeat center center/cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            animation: bounce 1.5s ease-in-out infinite;
+            cursor: pointer;
+        }
+
+        /* Bouncing animation keyframes */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 20px;
+        }
+
+        /* Button to link to product page */
+        .product-button {
+            background-color: #f1c40f;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .product-button:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1rem;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div id="logo" title="TechNest Logo" onclick="window.location.href='product.html';"></div>
+
+    <!-- Company Name -->
+    <h1>Welcome to TechNest</h1>
+
+    <!-- Company Info -->
+    <p>
+        At TechNest, we strive to redefine the future of technology with innovative and reliable solutions.
+        From cutting-edge hardware to top-tier software services, we are your trusted partner in the digital era.
+        Discover the world of possibilities with TechNest.
+    </p>
+
+    <!-- Product Button -->
+    <a href="product.html" class="product-button">View Our Product</a>
+
+    <!-- Footer with Contact Info -->
+    <footer>
+        <p>Contact us on:</p>
+        <p>Email: <a href="mailto:debra@gmail.com">debra@gmail.com</a></p>
+        <p>Phone: 0711111111</p>
+    </footer>
+</body>
+</html>
