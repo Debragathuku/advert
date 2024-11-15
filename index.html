@@ -9,107 +9,118 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            background-color: #2c3e50; /* Dark background color */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #333;
-            color: white;
+            color: #fff; /* White text */
             text-align: center;
+            overflow: hidden;
         }
 
-        /* Logo with bouncing animation */
+        /* Bouncing Logo Animation */
         #logo {
             width: 120px;
             height: 120px;
             background: url('images/8ab47efbbec4670b8e5221558c3f6463.jpg') no-repeat center center/cover;
             border-radius: 50%;
             margin-bottom: 20px;
-            animation: bounce 1.5s ease-in-out infinite;
-            cursor: pointer;
+            animation: bounce 2s ease infinite;
         }
 
-        /* Bouncing animation keyframes */
+        /* Bouncing Text Animation */
+        h1 {
+            font-size: 3rem;
+            color: #ecf0f1;
+            animation: bounceText 2s ease infinite;
+        }
+
+        /* Fade-in Text Animation */
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #bdc3c7;
+            max-width: 600px;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        /* Button Animation (scale effect) */
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            animation: buttonAnim 2s ease-in-out infinite;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Keyframes for bouncing logo */
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
             }
             50% {
-                transform: translateY(-30px);
+                transform: translateY(-20px);
             }
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        /* Keyframes for bouncing text */
+        @keyframes bounceText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 20px;
+        /* Keyframes for fade-in text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
-        /* Button to link to product page */
-        .product-button {
-            background-color: #f1c40f;
-            color: black;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 20px;
+        /* Keyframes for button animation (scale effect) */
+        @keyframes buttonAnim {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
 
-        .product-button:hover {
-            background-color: #e67e22;
-        }
-
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 1rem;
-            color: white;
-            width: 100%;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #f1c40f;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
-    <!-- Logo -->
-    <div id="logo" title="TechNest Logo" onclick="window.location.href='product.html';"></div>
+    <!-- Animated Logo -->
+    <div id="logo" title="TechNest Logo"></div>
 
-    <!-- Company Name -->
+    <!-- Animated Company Name -->
     <h1>Welcome to TechNest</h1>
 
-    <!-- Company Info -->
+    <!-- Company Info with Fade-in Effect -->
     <p>
         At TechNest, we strive to redefine the future of technology with innovative and reliable solutions.
         From cutting-edge hardware to top-tier software services, we are your trusted partner in the digital era.
         Discover the world of possibilities with TechNest.
     </p>
 
-    <!-- Product Button -->
-    <a href="product.html" class="product-button">View Our Product</a>
-
-    <!-- Footer with Contact Info -->
-    <footer>
-        <p>Contact us on:</p>
-        <p>Email: <a href="mailto:debra@gmail.com">debra@gmail.com</a></p>
-        <p>Phone: 0711111111</p>
-    </footer>
+    <!-- View Product Button with Hover and Scale Effect -->
+    <a href="product.html"><button class="btn">View Our Product</button></a>
 </body>
 </html>
